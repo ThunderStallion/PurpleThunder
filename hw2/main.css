@@ -20,8 +20,13 @@ main {
     height: 600px;
     width:80%;
     overflow:scroll;
+    margin: 30px auto;
 }
 header {
+}
+
+#spritesheet{
+	display:none;
 }
 .logo{
 	font-family: 'Monoton', cursive;
