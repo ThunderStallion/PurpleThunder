@@ -8,6 +8,7 @@
 
 body {
 	 background-image: url("./background.png");
+	 background-attachment: fixed;
 }
 
 #spritesheet{
@@ -16,8 +17,6 @@ body {
 main {
 	background-color: white;
 	border: 15px solid transparent;
-    -webkit-border-image: url(./border.gif) 20 stretch; /*safari*/
-    -o-border-image: url(./border.gif) 20 stretch;  /*opera*/
     border-image: url(./border.gif) 15 stretch; /*else*/
     padding: 2px;
     height: 600px;
@@ -89,27 +88,27 @@ aside {
 
 footer{
 	background: #ED6BC0;
-	margin-top: 70px;
+	margin-top: 4rem;
 	width:100%;
 	text-align: center;
-	padding: 15px 0px 20px 0px;
+	padding: 1em 0 1em 0;
 
 }
 .wrapper{
 	height: 60%;
-	margin: 0px auto 10px;
+	margin: 0px auto 1em;
 	display: inline-block;
 	position:relative;
 }
 .wrapper > img{
-	width: 100px;
+	width: 25%;
 }
 
 .wrapper > span{
-	border-radius:7px;
-	margin-left:8px;
-	padding:6px;
-	border: 3px solid black;
+	border-radius:.5em;
+	margin-left:.6em;
+	padding:.4em;
+	border: .2em solid black;
 	background: white;
   	position: absolute;
   	top: 0;
@@ -118,12 +117,12 @@ footer{
 .wrapper >span:before {
   content: "";
   position: absolute;
-  top: 6px;
-  left: -8px;
+  top: .5em;
+  left: -.5em;
   width: 0;
-  border-right: 8px solid black;
-  border-top: 9px solid transparent;
-  border-bottom: 9px solid transparent;
+  border-right: .5em solid black;
+  border-top: .5em solid transparent;
+  border-bottom: .5em solid transparent;
 }
 footer > span {
 	display: block;
