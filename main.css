@@ -1,0 +1,127 @@
+/* Hint: use relative measurements you'll find them useful! */
+
+@import url(https://fonts.googleapis.com/css?family=Monoton) Monoton;  /* Set this for Monton...figure out their syntax */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+	 background-image: url("./background.png");
+}
+
+#spritesheet{
+	display:none;
+}
+main {
+	background-color: white;
+	border: 15px solid transparent;
+    -webkit-border-image: url(./border.gif) 20 stretch; /*safari*/
+    -o-border-image: url(./border.gif) 20 stretch;  /*opera*/
+    border-image: url(./border.gif) 15 stretch; /*else*/
+    padding: 5px;
+    height: 600px;
+    width:80%;
+    overflow:scroll;
+    margin: 30px auto;
+}
+header {
+}
+
+.logo{
+	font-family: 'Monoton', cursive;
+	border-radius: 50%;
+	border-style: solid;
+	border-spacing: 15px;
+    width: 200px;
+    height: 200px;
+    background-color: #ED6BC0;
+    border-color: transparent;
+
+}
+section {
+	/* color rgb(243,234,95) is used */
+
+}
+section > div {
+    /* font is 'Comic Sans MS, text is automatically adjusted to lowercase do not mod the HTML */
+    
+    
+}
+section > aNastyNthChildSelectorToWrite {
+	/* ANastNthChildSelectorToWrite means what it says it isn't an indetifier */
+	/* background color is  rgb(192,77,249) */
+	
+    
+}
+section > aNastyNthChildSelectorToWrite {
+	/* ANastNthChildSelectorToWrite means what it says it isn't an indetifier */
+    /* background color is  rgb(43,209,252) */
+
+}
+section > div:nth-child(3):after {
+	/* gave you the nth child after selector for free to inspire you */
+	/* generated content in here ... a property can do that */
+	}
+	
+	/* a freebie for fun */
+aside {
+    background: rgb(255,63,63);
+    color: white;
+    border: 1rem solid black;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    font-family: sans-serif;
+    font-size: 2rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer{
+	background: #ED6BC0;
+	margin-top: 80px;
+	width:100%;
+	height: 200px;
+	align-items: center;
+	text-align: center;
+
+}
+.wrapper{
+	height: 60%;
+	margin: 20px auto;
+	display: inline-block;
+	position:relative;
+}
+.wrapper > img{
+	width: 100px;
+}
+
+.wrapper > span{
+	border-radius:7px;
+	padding:5px;
+	border: 3px solid black;
+	background: lightgray;
+  	position: absolute;
+  	top: 0;
+  	right: -90;
+  	margin-left:8px;
+}
+.wrapper >span:before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -15px;
+  width: 0;
+  border-right: 13px solid black;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+footer > span {
+	display: block;
+}
+/* Opps truncated the file for you to fill in */
+
+/* Solution given should be below 250 lines, solution we had was below 200 easily */
