@@ -1,6 +1,5 @@
 /* Hint: use relative measurements you'll find them useful! */
-
-@import url(https://fonts.googleapis.com/css?family=Monoton) Monoton;  /* Set this for Monton...figure out their syntax */
+@import url('https://fonts.googleapis.com/css?family=Monoton');
 
 * {
     box-sizing: border-box;
@@ -28,59 +27,79 @@ main {
 header {
 }
 
-.logo{
-	font-family: 'Monoton', cursive;
+.logo {
+    display: inline-block;
+	font-family: Monoton;
+    font-size: 175%;
+    text-decoration: none;
 	border-radius: 50%;
 	border-style: solid;
 	border-spacing: 15px;
-    width: 200px;
-    height: 200px;
     background-color: #ED6BC0;
     border-color: transparent;
-
+    box-shadow: 0px 4px 4px grey;
+    color: black;
+    margin: 40px 30px;
+    padding: 7px;
 }
+
+#kern1 {letter-spacing: -.15em;}
+#kern2 {letter-spacing: -.2em;}
+#kern3 {letter-spacing: -.15em;}
+
+.fun {
+    display: inline-block;
+    font-family:monospace;
+    font-size: 400%;
+    text-transform: uppercase;
+    text-shadow: 0px 3px 5px red;
+    color: white;
+}
+
 section {
-	margin: 0 auto;
-  width: 95%;
-  background: #f4e569;
-  display: flex;
-  display: -webkit-flex;
-  height: 25%;
-  flex-direction: column-reverse;
+    height: 25%;
+    width: 95%;
+    display: -webkit-flex;
+    display: flex;
+    background-color: rgb(243,234,95);
+    flex-direction: column-reverse;
+    margin: auto;
+}
+
+section > div {
+    display: flex;
+    width: 50%;
+    flex-grow: 1;
+    text-transform: lowercase;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    align-items: center;
+    color: white;
 
 }
-section > div {
-  width: 50%;
-  display: flex;
-  flex-grow: 1;
-  text-transform: lowercase;
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  align-items: center;
-  color: white;
-}
+
 section > div:nth-child(odd) {
-  background-color: rgb(192,77,249);
-  align-self: flex-end;
-  padding-left: .5em;
+    background-color: rgb(192,77,249);
+    align-self: flex-end;
+    padding-left: .5em;
 }
 section > div:nth-child(even) {
-  background-color: rgb(43,209,252);
-  align-self: flex-start;
-  direction: rtl;
-  padding-right: .5em;
+	background-color: rgb(43,209,252);
+    align-self: flex-start;
+    direction: rtl;
+    padding-right: .5em;
 }
 section > div:nth-child(3):after {
-	/* gave you the nth child after selector for free to inspire you */
-	/* generated content in here ... a property can do that */
-	}
-
-@media all and (max-width: 600px) {
-  section {
-    flex-flow: column wrap;
-  }
+    content: "\00a0 \2665 \2665 \2665";
 }
 
-	/* a freebie for fun */
+@media all and (max-width: 500px) {
+    section > div {
+      width: 100%;
+      padding: 0;
+      justify-content: center;
+    }
+}
+
 aside {
     background: rgb(255,63,63);
     color: white;
@@ -100,7 +119,7 @@ aside {
 	height:2rem;
 	width:2rem;
 	fill:white;
-	animation-play-state: paused; 
+	animation-play-state: paused;
 	animation-name:ani;
 	animation-duration:6s;
 	animation-iteration-count: infinite;
@@ -166,7 +185,7 @@ footer{
   	top: 0;
   	right: -90;
   	box-shadow: -.1em .2em 1em black;
-  	
+
 }
 .wrapper >span:before {
   opacity:0.0;
