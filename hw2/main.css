@@ -23,8 +23,7 @@ main {
     padding: 2px;
     width:80%;
     margin: 30px auto;
-}
-header {
+    display:block;
 }
 
 .logo {
@@ -56,6 +55,8 @@ header {
     color: white;
     margin: 40px 30px;
     float: right;
+    -webkit-box-reflect: below -11px;
+    -webkit-gradient(linear, bottom, top, from (white), to(transparent))
 }
 
 section {
@@ -109,6 +110,10 @@ section > div:nth-child(3):after {
 
     .logo {
       margin-bottom: 0;
+    }
+
+    .fun {
+      -webkit-box-reflect: unset;
     }
 }
 
@@ -167,15 +172,14 @@ aside {
     }
 }
 
-
 footer{
 	background: #ED6BC0;
 	margin-top: 4rem;
 	width:100%;
 	text-align: center;
 	padding: 1em 0 1em 0;
-
 }
+
 .wrapper{
 	height: 60%;
   width: 100%;
@@ -184,6 +188,7 @@ footer{
 	position:relative;
 
 }
+
 .wrapper > img{
 	width: 100px;
 }
@@ -201,6 +206,7 @@ footer{
   	box-shadow: -.1em .2em 1em black;
 
 }
+
 .wrapper >span:before {
   opacity:0.0;
   content: "";
@@ -228,8 +234,3 @@ footer .wrapper {
 footer > span {
 	display: block;
 }
-
-
-/* Opps truncated the file for you to fill in */
-
-/* Solution given should be below 250 lines, solution we had was below 200 easily */
