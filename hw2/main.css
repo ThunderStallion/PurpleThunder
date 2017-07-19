@@ -16,12 +16,13 @@ body {
 }
 main {
 	background-color: white;
-	border: 15px solid transparent;
+	border-width: 15px;
+	border-style: solid;
+    -webkit-border-image: url(./border.gif) 15 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(./border.gif) 15 stretch; /* Opera 11-12.1 */
     border-image: url(./border.gif) 15 stretch; /*else*/
     padding: 2px;
-    height: 600px;
     width:80%;
-    overflow:scroll;
     margin: 30px auto;
 }
 header {
@@ -99,8 +100,42 @@ aside {
 	height:2rem;
 	width:2rem;
 	fill:white;
-
+	animation-play-state: paused; 
+	animation-name:ani;
+	animation-duration:6s;
+	animation-iteration-count: infinite;
+	-webkit-animation-play-state: paused;
+	-webkit-animation-name:ani;
+	-webkit-animation-duration:6s;
+	-webkit-animation-iteration-count: infinite;
+	transition: fill 5s ease;
 }
+
+[title ~= bugs]:hover {
+		animation-play-state: running;
+		-webkit-animation-play-state: running;
+		height:10rem;
+		width:10rem;
+		fill:black;
+}
+@keyframes ani {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(1080deg);
+    }
+}
+/*safari*/
+@-webkit-keyframes ani {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(1080deg);
+    }
+}
+
 
 footer{
 	background: #ED6BC0;
@@ -121,6 +156,7 @@ footer{
 }
 
 .wrapper > span{
+	opacity:0.0;
 	border-radius:.5em;
 	margin-left:.6em;
 	padding:.4em;
@@ -129,8 +165,11 @@ footer{
   	position: absolute;
   	top: 0;
   	right: -90;
+  	box-shadow: -.1em .2em 1em black;
+  	
 }
 .wrapper >span:before {
+  opacity:0.0;
   content: "";
   position: absolute;
   top: .5em;
@@ -139,7 +178,16 @@ footer{
   border-right: .5em solid black;
   border-top: .5em solid transparent;
   border-bottom: .5em solid transparent;
+  transition: blue 1s linear;
 }
+
+.wrapper:hover>span, .wrapper:hover>span:before {
+	display:inline-block;
+	opacity:1.0;
+	transition: all 0.5s ease-in-out;
+
+}
+
 footer > span {
 	display: block;
 }
