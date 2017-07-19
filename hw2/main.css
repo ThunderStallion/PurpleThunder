@@ -39,30 +39,46 @@ header {
 
 }
 section {
-	/* color rgb(243,234,95) is used */
+	margin: 0 auto;
+  width: 95%;
+  background: #f4e569;
+  display: flex;
+  display: -webkit-flex;
+  height: 25%;
+  flex-direction: column-reverse;
 
 }
 section > div {
-    /* font is 'Comic Sans MS, text is automatically adjusted to lowercase do not mod the HTML */
-    
-    
+  width: 50%;
+  display: flex;
+  flex-grow: 1;
+  text-transform: lowercase;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  align-items: center;
+  color: white;
 }
-section > aNastyNthChildSelectorToWrite {
-	/* ANastNthChildSelectorToWrite means what it says it isn't an indetifier */
-	/* background color is  rgb(192,77,249) */
-	
-    
+section > div:nth-child(odd) {
+  background-color: rgb(192,77,249);
+  align-self: flex-end;
+  padding-left: .5em;
 }
-section > aNastyNthChildSelectorToWrite {
-	/* ANastNthChildSelectorToWrite means what it says it isn't an indetifier */
-    /* background color is  rgb(43,209,252) */
-
+section > div:nth-child(even) {
+  background-color: rgb(43,209,252);
+  align-self: flex-start;
+  direction: rtl;
+  padding-right: .5em;
 }
 section > div:nth-child(3):after {
 	/* gave you the nth child after selector for free to inspire you */
 	/* generated content in here ... a property can do that */
 	}
-	
+
+@media all and (max-width: 600px) {
+  section {
+    flex-flow: column wrap;
+  }
+}
+
 	/* a freebie for fun */
 aside {
     background: rgb(255,63,63);
@@ -127,6 +143,8 @@ footer{
 footer > span {
 	display: block;
 }
+
+
 /* Opps truncated the file for you to fill in */
 
 /* Solution given should be below 250 lines, solution we had was below 200 easily */
