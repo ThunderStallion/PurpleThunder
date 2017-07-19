@@ -1,6 +1,7 @@
 /* Hint: use relative measurements you'll find them useful! */
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+@import url(https://fonts.googleapis.com/css?family=Monoton);  
 
-@import url(https://fonts.googleapis.com/css?family=Monoton) Monoton;  /* Set this for Monton...figure out their syntax */
 
 * {
     box-sizing: border-box;
@@ -127,6 +128,7 @@ footer{
 	width:100%;
 	text-align: center;
 	padding: 1em 0 1em 0;
+	font-family: 'Dancing Script', cursive;
 
 }
 .wrapper{
