@@ -18,10 +18,10 @@ main {
 	background-color: white;
 	border: 15px solid transparent;
     border-image: url(./border.gif) 15 stretch; /*else*/
+    -webkit-border-image: url(./border.gif) 15 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(./border.gif) 15 stretch; /* Opera 11-12.1 */
     padding: 2px;
-    height: 600px;
-    width:86%;
-    overflow:scroll;
+    width:80%;
     margin: 30px auto;
 }
 header {
@@ -101,6 +101,14 @@ aside {
     }
     100% {
         transform: rotate(1080deg);
+    }
+}
+@keyframes ani {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }
 
