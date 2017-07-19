@@ -16,10 +16,11 @@ body {
 }
 main {
 	background-color: white;
-	border: 15px solid transparent;
-    border-image: url(./border.gif) 15 stretch; /*else*/
+	border-width: 15px;
+	border-style: solid;
     -webkit-border-image: url(./border.gif) 15 stretch; /* Safari 3.1-5 */
     -o-border-image: url(./border.gif) 15 stretch; /* Opera 11-12.1 */
+    border-image: url(./border.gif) 15 stretch; /*else*/
     padding: 2px;
     width:80%;
     margin: 30px auto;
@@ -85,12 +86,18 @@ aside {
 	fill:white;
 	animation-play-state: paused; 
 	animation-name:ani;
-	animation-duration:5s;
+	animation-duration:6s;
+	animation-iteration-count: infinite;
+	-webkit-animation-play-state: paused;
+	-webkit-animation-name:ani;
+	-webkit-animation-duration:6s;
+	-webkit-animation-iteration-count: infinite;
 	transition: fill 5s ease;
 }
 
 [title ~= bugs]:hover {
 		animation-play-state: running;
+		-webkit-animation-play-state: running;
 		height:10rem;
 		width:10rem;
 		fill:black;
@@ -103,14 +110,16 @@ aside {
         transform: rotate(1080deg);
     }
 }
-@keyframes ani {
+/*safari*/
+@-webkit-keyframes ani {
     0% {
         transform: rotate(0deg);
     }
     100% {
-        transform: rotate(0deg);
+        transform: rotate(1080deg);
     }
 }
+
 
 footer{
 	background: #ED6BC0;
