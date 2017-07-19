@@ -1,6 +1,5 @@
 /* Hint: use relative measurements you'll find them useful! */
-
-@import url(https://fonts.googleapis.com/css?family=Monoton) Monoton;  /* Set this for Monton...figure out their syntax */
+@import url('https://fonts.googleapis.com/css?family=Monoton');
 
 * {
     box-sizing: border-box;
@@ -28,43 +27,78 @@ main {
 header {
 }
 
-.logo{
-	font-family: 'Monoton', cursive;
+.logo {
+    display: inline-block;
+	font-family: Monoton;
+    font-size: 175%;
+    text-decoration: none;
 	border-radius: 50%;
 	border-style: solid;
 	border-spacing: 15px;
-    width: 200px;
-    height: 200px;
     background-color: #ED6BC0;
     border-color: transparent;
+    box-shadow: 0px 4px 4px grey;
+    color: black;
+    margin: 40px 30px;
+    padding: 7px;
+}
 
+#kern1 {letter-spacing: -.15em;}
+#kern2 {letter-spacing: -.2em;}
+#kern3 {letter-spacing: -.15em;}
+
+.fun {
+    display: inline-block;
+    font-family:monospace;
+    font-size: 400%;
+    text-transform: uppercase;
+    text-shadow: 0px 3px 5px red;
+    color: white;
 }
 section {
 	/* color rgb(243,234,95) is used */
-
+    height: 25%;
+    width: 95%;
+    display: -webkit-flex;
+    display: flex;
+    background-color: rgb(243,234,95);
+    flex-direction: column-reverse;
+    margin: auto;
 }
+
 section > div {
     /* font is 'Comic Sans MS, text is automatically adjusted to lowercase do not mod the HTML */
-    
+    display: flex;
+    width: 50%;
+    flex-grow: 1;
+    text-transform: lowercase;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    align-items: center;
+    color: white;
     
 }
-section > aNastyNthChildSelectorToWrite {
-	/* ANastNthChildSelectorToWrite means what it says it isn't an indetifier */
-	/* background color is  rgb(192,77,249) */
-	
-    
+@media all and (max-width 300px) {
+    section > div {
+        width: 100%;
+    }
 }
-section > aNastyNthChildSelectorToWrite {
-	/* ANastNthChildSelectorToWrite means what it says it isn't an indetifier */
-    /* background color is  rgb(43,209,252) */
-
+section > div:nth-child(odd) {
+    background-color: rgb(192,77,249);
+    align-self: flex-end;
+    padding-left: .5em;
+}
+section > div:nth-child(even) {
+	background-color: rgb(43,209,252);
+    align-self: flex-start;
+    direction: rtl;
+    padding-right: .5em;
 }
 section > div:nth-child(3):after {
 	/* gave you the nth child after selector for free to inspire you */
 	/* generated content in here ... a property can do that */
-	}
+    content: "\00a0 \2665 \2665 \2665";
+}
 	
-	/* a freebie for fun */
 aside {
     background: rgb(255,63,63);
     color: white;
