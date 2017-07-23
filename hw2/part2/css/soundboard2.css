@@ -1,0 +1,21 @@
+
+
+/*split into 4*/
+img + audio{
+	display: none;
+}
+.cell{
+	width:100%;
+	display: inline-block;
+}
+@media (min-width: 700px) {
+	.cell{
+		width:33%;
+	}
+}
+
+@media (min-width: 800px) {
+	.cell{
+		width:25%;
+	}
+}
