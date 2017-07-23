@@ -11,18 +11,24 @@
 
 	    <style>
 	    	<!--
+	    		
 	    		main{
+	    			float: right;
 	    			width:90%;
 	    			margin: auto;
 	    		}
 	    		.imx{
-	    			width:5em;
+	    			width:90%;
 
+	    		}
+	    		img + audio{
+	    			display:none;
 	    		}
 	    		.container-fluid > div {
 				    margin-top:10px;
 				    padding: 20px;
 				    outline: 2px solid #ccc;
+				    border: solid 3px black;
 				    outline-offset: -10px;
 				    -moz-outline-radius: 10px;
 				    -webkit-outline-radius: 10px;
@@ -30,20 +36,25 @@
 	    </style>
 	</head>
 	<body>
-		<header>
-			<h1>CSE134 Soundboard</h1>
-		</header>
-
-		<nav>
-			<ul>
-				<li> <a href="soundboard-part1a.html">SoundBoard-Part1a</a>
-				<li> <a href="tagtest.html"> TagTest</a></li>
-				<li> <a href="path/to/login">Login</a></li>
-				<li> <a href="path/to/createAccount">Create Account</a></li>
-				<li> <a href="path/to/ContactUs">Contact Us</a></li>
-			</ul>
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <ul class="nav navbar-nav">
+		      <li class="active"><a href="#">Purple Thunder</a></li>
+		      <li class="dropdown">
+		        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Homework 1
+		        <span class="caret"></span></a>
+		        <ul class="dropdown-menu">
+		          <li> <a href="soundboard-part1a.html">SoundBoard-Part1a</a></li>
+		          <li> <a href="soundboard-part1b.html">SoundBoard-Part1b</a></li>
+				  <li> <a href="tagtest.html"> TagTest</a></li>
+		        </ul>
+		      </li>
+		      <li><a href="#">Homework 2</a></li>
+		    </ul>
+		  </div>
 		</nav>
-		<main>
+		
+		<div class= "float-md-right">
 			<div class="container-fluid">
 					<div class="col-xs-12 col-sm-4 col-md-3">
 						<img class="imx"  src="images/audiosound.png" alt="image1"/> 
@@ -118,12 +129,32 @@
 						</audio>
 					</div>
 			</div>
-		</main>
+		</div>
 		<footer>
 			Copyright @ 2017
 		</footer>
 
+		<script>
+		    var els = document.querySelectorAll('.container-fluid > div');
+
+		    for (var i = 0, len = els.length; i < len; i++) {
+		        els[i].addEventListener('click', function () {
+		            var sound;
+
+		            sound = this.getElementsByTagName('audio')[0];
+
+		            if (sound.paused) {
+		                sound.play();
+		            } else {
+		                sound.pause();
+		            }
+
+		        }, false)
+		    }
+
+		</script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+
 	</body>
 </html>
