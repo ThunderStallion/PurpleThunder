@@ -11,7 +11,7 @@
 
 	    <style>
 	    	<!--
-	    		
+
 	    		main{
 	    			float: right;
 	    			width:90%;
@@ -39,7 +39,7 @@
 		<nav class="navbar navbar-inverse">
 		  <div class="container-fluid">
 		    <ul class="nav navbar-nav">
-		      <li class="active"><a href="#">Purple Thunder</a></li>
+		      <li class="active"><a id="soundboard-name" href="#">Purple Thunder</a></li>
 		      <li class="dropdown">
 		        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Homework 1
 		        <span class="caret"></span></a>
@@ -53,88 +53,21 @@
 		    </ul>
 		  </div>
 		</nav>
-		
+
 		<div class= "float-md-right">
 			<div class="container-fluid">
-					<div class="col-xs-12 col-sm-4 col-md-3">
-						<img class="imx"  src="images/audiosound.png" alt="image1"/> 
-						<audio id="a1" controls>
-						  <source src="audio/fatsynslap.wav" type="audio/wav">
-						</audio>
-					</div>
-					<div class="col-xs-12 col-sm-4 col-md-3">
-						<img class="imx"  src="images/audiosound.png" alt="image2"/>
-						<audio id="a2" controls>
-						  <source src="audio/fatsynslap.wav" type="audio/wav">
-						</audio>
-					</div>
-					<div class="col-xs-12 col-sm-4 col-md-3">
-						<img class="imx"  src="images/audiosound.png" alt="image3" />
-						<audio id="a3" controls>
-						  <source src="audio/fatsynslap.wav" type="audio/wav">
-						</audio>
-					</div>
-					<div class="col-xs-12 col-sm-4 col-md-3">
-						<img class="imx"  src="images/audiosound.png" alt="image4" />
-						<audio id="a4" controls>
-						  <source src="audio/fatsynslap.wav" type="audio/wav">
-						</audio>
-					</div>
-					<div class="col-xs-12 col-sm-4 col-md-3">
-						<img class="imx"  src="images/audiosound.png" alt="image5" />
-						<audio id="a5" controls>
-						  <source src="audio/fatsynslap.wav" type="audio/wav">
-						</audio>
-					</div>
-					<div class="col-xs-12 col-sm-4 col-md-3">
-						<img class="imx"  src="images/audiosound.png" alt="image6"  />
-						<audio id="a6" controls>
-						  <source src="audio/fatsynslap.wav" type="audio/wav">
-						</audio>
-					</div>
-					<div class="col-xs-12 col-sm-4 col-md-3">
-						<img class="imx"  src="images/audiosound.png" alt="image7" />
-						<audio id="a7" controls>
-						  <source src="audio/fatsynslap.wav" type="audio/wav">
-						</audio>
-					</div>
-					<div class="col-xs-12 col-sm-4 col-md-3">
-						<img class="imx"  src="images/audiosound.png" alt="image8"/>
-						<audio id="a8" controls>
-						  <source src="audio/fatsynslap.wav" type="audio/wav">
-						</audio>
-					</div>
-					<div class="col-xs-12 col-sm-4 col-md-3">
-						<img class="imx"  src="images/audiosound.png" alt="image9" />
-						<audio id="a9" controls>
-						  <source src="audio/fatsynslap.wav" type="audio/wav">
-						</audio>
-					</div>
-					<div class="col-xs-12 col-sm-4 col-md-3">
-						<img class="imx"  src="images/audiosound.png" alt="image10" />
-						<audio id="a10" controls>
-						  <source src="audio/fatsynslap.wav" type="audio/wav">
-						</audio>
-					</div>
-					<div class="col-xs-12 col-sm-4 col-md-3">
-						<img class="imx"  src="images/audiosound.png" alt="image11" />
-						<audio id="a11" controls>
-						  <source src="audio/fatsynslap.wav" type="audio/wav">
-						</audio>
-					</div>
-					<div class="col-xs-12 col-sm-4 col-md-3">
-						<img class="imx"  src="images/audiosound.png" alt="image12" />
-						<audio id="a12" controls>
-						  <source src="audio/fatsynslap.wav" type="audio/wav">
-						</audio>
-					</div>
+				<template></template>
 			</div>
 		</div>
 		<footer>
 			Copyright @ 2017
 		</footer>
 
-		<script>
+
+
+
+	</body>
+	<script>
 		    var els = document.querySelectorAll('.container-fluid > div');
 
 		    for (var i = 0, len = els.length; i < len; i++) {
@@ -152,9 +85,10 @@
 		        }, false)
 		    }
 
-		</script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		    // A $( document ).ready() block.
+				$( document ).ready(function() {
 
-	</body>
+				});
+
+	</script>
 </html>
