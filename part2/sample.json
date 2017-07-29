@@ -1,0 +1,29 @@
+{
+  "soundboard-name": "Purple Thunder",
+  "sounds": [
+  {"id": "a1","file":"audio/fatsynslap.wav",
+   "image":"images/audiosound.png"},
+   {"id": "a2","file":"audio/fatsynslap.wav",
+   "image":"images/audiosound.png"},
+   {"id": "a3","file":"audio/fatsynslap.wav",
+   "image":"images/audiosound.png"},
+   {"id": "a4","file":"audio/fatsynslap.wav",
+   "image":"images/audiosound.png"},
+   {"id": "a5","file":"audio/fatsynslap.wav",
+   "image":"images/audiosound.png"},
+   {"id": "a6","file":"audio/fatsynslap.wav",
+   "image":"images/audiosound.png"},
+   {"id": "a7","file":"audio/fatsynslap.wav",
+   "image":"images/audiosound.png"},
+   {"id": "a8","file":"audio/fatsynslap.wav",
+   "image":"images/audiosound.png"},
+   {"id": "a9","file":"audio/fatsynslap.wav",
+   "image":"images/audiosound.png"},
+   {"id": "a10","file":"audio/fatsynslap.wav",
+   "image":"images/audiosound.png"},
+   {"id": "a11","file":"audio/fatsynslap.wav",
+   "image":"images/audiosound.png"},
+   {"id": "a12","file":"audio/fatsynslap.wav",
+   "image":"images/audiosound.png"}
+   ]
+}
