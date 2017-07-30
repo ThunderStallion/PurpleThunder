@@ -2,12 +2,18 @@ body {
 	 background-image: url("../images/triangle_fractal.png");
 	 background-attachment: fixed;
 }
-.container [class^="col"] {
-  padding-left: 0;
-  padding-right: 0;
-  background: red
-}
 
+/*error box appears if any errors occur*/
+#error_box{
+    display:none;
+    padding:6px;
+    text-align:center;
+    background-color:white;
+    font-weight: bold;
+    color: Red;
+    font-size:18px;
+}
+/*error box in case browser does not support scripts*/
 .noscript_box{
     padding:50px;
     font-size: 20px;
@@ -16,6 +22,7 @@ body {
     width:50%;
     margin: 15% auto;
 }
+/*custom navbar theme*/
 .navbar.caramel-theme{
      background-color:#99855f;
      font-family: Verdana,sans-serif;
@@ -24,13 +31,12 @@ body {
 .navbar-brand.caramel-theme{
     color:white;
 }
+/*custom soundboard grid layout spacing*/
 #sb_grid{
     width:80%;
     margin: 0 auto;
     background-color:black;
 }
-
-
 .sb_gridbox.no-gutter {
   text-align: center;
   margin: 0 !important;
@@ -91,6 +97,7 @@ body {
 }
 
 
+/*mobile view fixes navbar*/*/
 @media screen and (max-width: 750px) {
     .dropbtn , .dropdown{
         width:100%;

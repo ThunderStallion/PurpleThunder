@@ -2,6 +2,26 @@ body {
 	 background-image: url("../images/dark_background.jpg");
 	 background-attachment: fixed;
 }
+/*error box appears if any errors occur*/
+#error_box{
+    display:none;
+    padding:6px;
+    text-align:center;
+    background-color:white;
+    font-weight: bold;
+    color: Red;
+    font-size:18px;
+}
+/*error box in case browser does not support scripts*/
+.noscript_box{
+    padding:50px;
+    font-size: 20px;
+    background-color:white;
+    border: solid 8px black;
+    width:50%;
+    margin: 15% auto;
+}
+/*custom navbar theme*/
 .navbar.caramel-theme{
     background-color:dimgrey;
 }
@@ -11,11 +31,13 @@ body {
 .dropdown > .dropbtn{
     background-color:white;
 }
+/*Changes top-right button to match theme*/
 .btn-warning{
     background-color: white;
     color: black;
     border-color: black
 }
+/*custom soundboard grid layout spacing*/
 #sb_grid{
     width:80%;
     margin: 0 auto;
@@ -81,7 +103,7 @@ body {
     display: block;
 }
 
-
+/*mobile view fixes navbar*/
 @media screen and (max-width: 750px) {
     .dropbtn , .dropdown{
         width:100%;
