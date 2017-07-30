@@ -31,8 +31,8 @@
                     <div class="dropdown">
                             <button class="dropbtn">Change Content</button>
                             <div class="dropdown-content">
-                                <a href="#" id="instr_cont_link" onclick="loadJSON('sb.json')">Instruments</a>
-                                <a href="#" id="mystery_cont_link" onclick="loadJSON('cats.json')">Mystery</a>
+                                <a href="#" id="instr_cont_link" onclick="changeSoundBoard(instr)">Mystery</a>
+                                <a href="#" id="mystery_cont_link" onclick="changeSoundBoard(cats)">Instr</a>
                             </div>
                     </div>
                     <div class="nav navbar-nav navbar-right">
@@ -55,8 +55,7 @@
 
             <script>
                 window.onload = function(){
-                    loadJSON('sb.json');
-                    addThemes();
+                    loadData();
                 }
             </script>
              <noscript>

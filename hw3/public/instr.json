@@ -1,5 +1,6 @@
 {
    "soundboard-name": "instruments",
+
    "size" : 12,
    "image": ["images/audiosound.png","images/audiosound.png", "images/audiosound.png",
             "images/audiosound.png","images/audiosound.png", "images/audiosound.png",
@@ -12,5 +13,4 @@
    "type":["audio/wav", "audio/wav", "audio/wav", "audio/wav",
         "audio/wav", "audio/wav", "audio/wav", "audio/wav",
          "audio/wav", "audio/wav", "audio/wav", "audio/wav"]
-
 }

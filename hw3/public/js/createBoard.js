@@ -5,34 +5,37 @@
     };
 */
 
-var sb = {
-   size : 12,
-   image: ["images/audiosound.png","images/audiosound.png", "images/audiosound.png",
-            "images/audiosound.png","images/audiosound.png", "images/audiosound.png",
-            "images/audiosound.png","images/audiosound.png", "images/audiosound.png",
-            "images/audiosound.png","images/audiosound.png", "images/audiosound.png"],
-   sound: ["audio/applause.wav", "audio/bassc2.wav", "audio/bassc3.wav",
-            "audio/bassloop.wav", "audio/boom.wav", "audio/contrac2.wav",
-            "audio/fatsynslap.wav", "audio/guitarc4.wav", "audio/hihat.wav",
-            "audio/hornc5.wav", "audio/pianoc6.wav", "audio/snare.wav"],
-   type:["audio/wav", "audio/wav", "audio/wav", "audio/wav",
-        "audio/wav", "audio/wav", "audio/wav", "audio/wav",
-         "audio/wav", "audio/wav", "audio/wav", "audio/wav"]
-
+var loaded = false;
+var sb = null, instr = null, cats = null;
+var err_msg = "";
+function fetchJSONFile(url) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            sb = instr;
+            if(loaded == true){
+                document.getElementById("testing").innerHTML+= "HAS BEEN LOADED";
+                cats = JSON.parse(this.responseText);
+            }
+            else{
+               document.getElementById("testing").innerHTML+= "HAS NOT BEEN LOADED";
+               instr = JSON.parse(this.responseText);
+                sb=instr;
+                createAudiofiles();
+                createImageBoard();
+                createImageList();
+                addThemes();
+                loaded= true;
+            }
+            return JSON.parse(this.responseText);
+        }
+    };
+  xhttp.open("GET", url, true);
+  xhttp.send();
 }
-
-var cats = {
-    size : 12,
-    image: ["images/cat1.png","images/cat2.png", "images/cat3.jpg", "images/cat4.png",
-            "images/cat1.png","images/cat2.png", "images/cat3.jpg", "images/cat4.png",
-            "images/cat1.png","images/cat2.png", "images/cat3.jpg", "images/cat4.png"],
-    sound: ["audio/cat1.wav", "audio/cat2.wav","audio/cat3.wav",
-            "audio/cat4.wav", "audio/cat5.wav", "audio/cat6.wav",
-            "audio/cat7.wav", "audio/cat8.wav","audio/cat9.wav",
-            "audio/cat10.wav", "audio/cat11.wav", "audio/cat12.wav"],
-    type:["audio/wav", "audio/wav", "audio/wav", "audio/wav",
-        "audio/wav", "audio/wav", "audio/wav", "audio/wav",
-         "audio/wav", "audio/wav", "audio/wav", "audio/wav"]
+function loadData(){
+    var instr = fetchJSONFile('../instr.json');
+    var cats = fetchJSONFile('../cats.json');
 }
 
 function addThemes(){
@@ -58,7 +61,7 @@ function reloadCss()
 
 function createAudiofiles(){
     var af = document.getElementById("audiofiles");
-    for(i = 0; i<sb.size; i++){
+    for(i = 0; i<12; i++){
         var new_audio = document.createElement("audio");
         new_audio.id = "a"+i;
         new_audio.style.display = "none";
@@ -76,7 +79,7 @@ function createImageBoard(){
     var sb_img = t.content.querySelector("img");
     var sb_grid = document.getElementById("sb_grid");
 
-    for(i= 0; i<sb.size; i++){
+    for(i= 0; i<12; i++){
         sb_img.src = sb.image[i];
         sb_img.id= 'i'+i;
         var clone = document.importNode(t.content, true);
@@ -130,7 +133,7 @@ function createImageList(){
 function changeSoundBoard(jsObject){
     var sb= jsObject;
 
-    for(i=0; i<sb.size;i++){
+    for(i=0; i<12;i++){
         var new_img = sb.image[i];
         var new_audio = sb.sound[i];
         var new_audio_type=sb.type[i];
