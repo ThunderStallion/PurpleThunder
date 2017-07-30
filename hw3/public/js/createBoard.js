@@ -6,19 +6,20 @@
 */
 var loaded = false; 
 var sb = null, instr = null, cats = null;
-
+var err_msg = "";
 function fetchJSONFile(url) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            instr = JSON.parse(this.responseText);
             sb = instr;
             if(loaded == true){
                 document.getElementById("testing").innerHTML+= "HAS BEEN LOADED";
+                cats = JSON.parse(this.responseText);
             }
             else{
                document.getElementById("testing").innerHTML+= "HAS NOT BEEN LOADED";
-
+               instr = JSON.parse(this.responseText);
+                sb=instr;
                 createAudiofiles();
                 createImageBoard();
                 createImageList();
@@ -34,8 +35,6 @@ function fetchJSONFile(url) {
 function loadData(){
     var instr = fetchJSONFile('../instr.json');
     var cats = fetchJSONFile('../cats.json');
-    sb = instr;
-    console.log(JSON.stringify(sb));
 }
 
 function addThemes(){
