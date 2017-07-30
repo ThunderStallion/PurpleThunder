@@ -1,6 +1,6 @@
 {
     "soundboard-name": "cats",
-    "size" : 13,
+    "size" : 12,
     "image": ["images/cat1.png","images/cat2.png", "images/cat3.jpg", "images/cat4.png",
             "images/cat1.png","images/cat2.png", "images/cat3.jpg", "images/cat4.png",
             "images/cat1.png","images/cat2.png", "images/cat3.jpg", "images/cat4.png"],
