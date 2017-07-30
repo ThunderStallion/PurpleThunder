@@ -3,9 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src= "js/createBoard.js"></script>
+        <script src= "js/createBoard_jquery.js"></script>
         <script type="text/javascript">window._trackJs = { token: '4286688050e24061a211ffa2a3012a56' };</script>
-        <!--<script type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js"></script>-->
+        <script type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <title> Soundboard Part 3</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link id="theme_css" rel="stylesheet" href="css/light_theme.css">
@@ -54,10 +55,10 @@
             </template>
 
             <script>
-                window.onload = function(){
+                $( document ).ready(function() {
                     loadJSON('sb.json');
                     addThemes();
-                }
+                });
             </script>
              <noscript>
                 <div class="noscript_box">
