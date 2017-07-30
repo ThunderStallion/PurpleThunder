@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src= "js/createBoard.js"></script>
+        <title> Soundboard Part 3</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link id="theme_css" rel="stylesheet" href="css/light_theme.css">
+        <style>
+            .sb_gridbox {
+                border: thick solid transparent;
+            }
+        </style>
+    </head>
+    <body>
+            <nav class="navbar caramel-theme">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand caramel-theme" href="#">Farfield Systems</a>
+                    </div>
+                    <div class="dropdown">
+                            <button class="dropbtn">Themes</button>
+                            <div class="dropdown-content">
+                                <a href="#" id="light_theme_link">Light Theme</a>
+                                <a href="#" id="dark_theme_link">Dark Theme</a>
+                            </div>
+                    </div>
+                    <div class="dropdown">
+                            <button class="dropbtn">Change Content</button>
+                            <div class="dropdown-content">
+                                <a href="#" id="instr_cont_link" onclick="changeSoundBoard(sb)">Instruments</a>
+                                <a href="#" id="mystery_cont_link" onclick="changeSoundBoard(cats)">Mystery</a>
+                            </div>
+                    </div>
+                    <div class="nav navbar-nav navbar-right"> 
+    
+                        <button class="btn btn-warning navbar-btn">Toggle View</button>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="testing"></div>
+            <div id="audiofiles"> </div>
+            <div id ="sb_grid"> </div>
+            <div id ="sb_list"></div>
+
+            <template id="sb_grid_template">
+                <div class="sb_gridbox no-gutter col-xs-12 col-sm-4 col-md-3">
+                    <img class="sb_img">
+                </div>
+            </template>
+
+            <script>
+                window.onload = function(){
+                    createAudiofiles();
+                    createImageBoard();
+                    createImageList();
+                    addThemes();
+                }
+            </script>
+             <noscript>
+                <div class="noscript_box">
+                    We apologize but this site requires you to turn on Javascript!
+                </div>
+            </noscript>
+    </body>
+    
+</html>
