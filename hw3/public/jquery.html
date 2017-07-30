@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src= "js/createBoard.js"></script>
         <title> Soundboard Part 3</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -29,8 +30,8 @@
                     <div class="dropdown">
                             <button class="dropbtn">Change Content</button>
                             <div class="dropdown-content">
-                                <a href="#" id="instr_cont_link" onclick="loadJSON('sb.json')">Instruments</a>
-                                <a href="#" id="mystery_cont_link" onclick="loadJSON('cats.json')">Mystery</a>
+                                <a href="#" id="instr_cont_link" onclick="changeSoundBoard(sb)">Instruments</a>
+                                <a href="#" id="mystery_cont_link" onclick="changeSoundBoard(cats)">Mystery</a>
                             </div>
                     </div>
                     <div class="nav navbar-nav navbar-right">
@@ -52,10 +53,12 @@
             </template>
 
             <script>
-                window.onload = function(){
-                    loadJSON('sb.json');
-                    // addThemes();
-                }
+                $(document).ready(function() {
+                    createAudiofiles();
+                    createImageBoard();
+                    createImageList();
+                    addThemes();
+                });
             </script>
              <noscript>
                 <div class="noscript_box">
