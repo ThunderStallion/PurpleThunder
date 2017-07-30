@@ -4,31 +4,39 @@
     document.getElementById('theme_css').href = '../red.css';
     };
 */
+var loaded = false; 
+var sb = null, instr = null, cats = null;
 
-function fetchJSONFile(path, callback) {
-    var httpRequest = new XMLHttpRequest();
-    httpRequest.onreadystatechange = function() {
-        if (httpRequest.readyState === 4) {
-            if (httpRequest.status === 200) {
-                var data = JSON.parse(httpRequest.responseText);
-                if (callback) callback(data);
+function fetchJSONFile(url) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            instr = JSON.parse(this.responseText);
+            sb = instr;
+            if(loaded == true){
+                document.getElementById("testing").innerHTML+= "HAS BEEN LOADED";
             }
+            else{
+               document.getElementById("testing").innerHTML+= "HAS NOT BEEN LOADED";
+
+                createAudiofiles();
+                createImageBoard();
+                createImageList();
+                addThemes();
+                loaded= true;
+            }
+            return JSON.parse(this.responseText);
         }
     };
-    httpRequest.open('GET', path);
-    httpRequest.send(); 
+  xhttp.open("GET", url, true);
+  xhttp.send();
 }
-
-// this requests the file and executes a callback with the parsed result once
-//   it is available
-
-var instr = null;
-var cats = null;
-fetchJSONFile('../sb.json', function(data){instr = data;});
-fetchJSONFile('../cats.json', function(data){cats = data;});
-
-
-
+function loadData(){
+    var instr = fetchJSONFile('../instr.json');
+    var cats = fetchJSONFile('../cats.json');
+    sb = instr;
+    console.log(JSON.stringify(sb));
+}
 
 function addThemes(){
 
@@ -53,7 +61,7 @@ function reloadCss()
 
 function createAudiofiles(){
     var af = document.getElementById("audiofiles");
-    for(i = 0; i<sb.size; i++){
+    for(i = 0; i<12; i++){
         var new_audio = document.createElement("audio");
         new_audio.id = "a"+i;
         new_audio.style.display = "none";
@@ -71,7 +79,7 @@ function createImageBoard(){
     var sb_img = t.content.querySelector("img");
     var sb_grid = document.getElementById("sb_grid");
 
-    for(i= 0; i<sb.size; i++){
+    for(i= 0; i<12; i++){
         sb_img.src = sb.image[i];
         sb_img.id= 'i'+i;
         var clone = document.importNode(t.content, true);
@@ -130,7 +138,7 @@ function soundAction(num){
 function changeSoundBoard(jsObject){
     var sb= jsObject;
 
-    for(i=0; i<sb.size;i++){
+    for(i=0; i<12;i++){
         var new_img = sb.image[i];
         var new_audio = sb.sound[i];
         var new_audio_type=sb.type[i];

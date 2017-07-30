@@ -1,14 +1,14 @@
 {
-    soundboard-name: "cats",
-    size : 12,
-    image: ["images/cat1.png","images/cat2.png", "images/cat3.jpg", "images/cat4.png",
+    "soundboard-name": "cats",
+    "size" : 13,
+    "image": ["images/cat1.png","images/cat2.png", "images/cat3.jpg", "images/cat4.png",
             "images/cat1.png","images/cat2.png", "images/cat3.jpg", "images/cat4.png",
             "images/cat1.png","images/cat2.png", "images/cat3.jpg", "images/cat4.png"],
-    sound: ["audio/cat1.wav", "audio/cat2.wav","audio/cat3.wav",
+    "sound": ["audio/cat1.wav", "audio/cat2.wav","audio/cat3.wav",
             "audio/cat4.wav", "audio/cat5.wav", "audio/cat6.wav",
             "audio/cat7.wav", "audio/cat8.wav","audio/cat9.wav",
             "audio/cat10.wav", "audio/cat11.wav", "audio/cat12.wav"],
-    type:["audio/wav", "audio/wav", "audio/wav", "audio/wav",
+    "type":["audio/wav", "audio/wav", "audio/wav", "audio/wav",
         "audio/wav", "audio/wav", "audio/wav", "audio/wav",
          "audio/wav", "audio/wav", "audio/wav", "audio/wav"]
 }
