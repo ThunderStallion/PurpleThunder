@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src= "js/createBoard.js"></script>
+        <script type="text/javascript">window._trackJs = { token: '4286688050e24061a211ffa2a3012a56' };</script>
+        <script type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
         <title> Soundboard Part 3</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link id="theme_css" rel="stylesheet" href="css/light_theme.css">
@@ -29,13 +31,13 @@
                     <div class="dropdown">
                             <button class="dropbtn">Change Content</button>
                             <div class="dropdown-content">
-                                <a href="#" id="instr_cont_link" onclick="changeSoundBoard(sb)">Instruments</a>
+                                <a href="#" id="instr_cont_link" onclick="changeSoundBoard(instr)">Instruments</a>
                                 <a href="#" id="mystery_cont_link" onclick="changeSoundBoard(cats)">Mystery</a>
                             </div>
                     </div>
                     <div class="nav navbar-nav navbar-right"> 
     
-                        <button class="btn btn-warning navbar-btn">Toggle View</button>
+                        <button id="togglebtn" class="btn btn-warning navbar-btn" onclick="toggleBoard()">Toggle To List View</button>
                     </div>
                 </div>
             </nav>
@@ -43,7 +45,7 @@
             <div id="testing"></div>
             <div id="audiofiles"> </div>
             <div id ="sb_grid"> </div>
-            <div id ="sb_list"></div>
+            <div id ="sb_list" style="display:none;"></div>
 
             <template id="sb_grid_template">
                 <div class="sb_gridbox no-gutter col-xs-12 col-sm-4 col-md-3">

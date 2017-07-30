@@ -30,6 +30,7 @@ body {
     background-color:black;
 }
 
+
 .sb_gridbox.no-gutter {
   text-align: center;
   margin: 0 !important;
@@ -44,6 +45,9 @@ body {
 
 #sb_list {
     display:none;
+    margin: 0px auto;
+    text-align: center;
+    background-color: white;
 }
 /** dropdown menu **/
 .dropbtn {

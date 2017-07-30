@@ -22,6 +22,12 @@ body {
     background-color:black;
 }
 
+#sb_list{
+    display:none;
+    margin: 0px auto;
+    text-align: center;
+    background-color: white;
+}
 .sb_gridbox.no-gutter {
   text-align:center;
   margin: 0 !important;
