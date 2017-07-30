@@ -34,7 +34,9 @@ function fetchJSONFile(url) {
                     loaded= true;
                 }
                 return JSON.parse(this.responseText);
+            }
         }
+    }
     catch(err){
         if(load_fail == false){
                 err_msg+="Error loading config file with AJAX\n";

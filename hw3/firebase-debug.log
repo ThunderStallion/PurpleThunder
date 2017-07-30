@@ -1,0 +1,23 @@
+[debug] [2017-07-30T14:02:14.846Z] ----------------------------------------------------------------------
+[debug] [2017-07-30T14:02:14.850Z] Command:      /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2017-07-30T14:02:14.851Z] CLI Version:  3.9.1
+[debug] [2017-07-30T14:02:14.851Z] Platform:     darwin
+[debug] [2017-07-30T14:02:14.851Z] Node Version: v5.7.1
+[debug] [2017-07-30T14:02:14.853Z] Time:         Sun Jul 30 2017 07:02:14 GMT-0700 (PDT)
+[debug] [2017-07-30T14:02:14.853Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-07-30T14:02:14.872Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-07-30T14:02:14.872Z] > authorizing via signed-in user
+[debug] [2017-07-30T14:02:14.875Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/minsokchon-d7e0d  
+ Sun Jul 30 2017 07:02:14 GMT-0700 (PDT)
+[debug] [2017-07-30T14:02:15.774Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-30T14:02:15.775Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/minsokchon-d7e0d/tokens  
+ Sun Jul 30 2017 07:02:15 GMT-0700 (PDT)
+[debug] [2017-07-30T14:02:16.206Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'minsokchon-d7e0d'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing public directory for upload...
+[debug] [2017-07-30T14:02:18.178Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/minsokchon-d7e0d/uploads/-KqInUuVPwdrRYC_O-NF?fileCount=62&message=  
+ Sun Jul 30 2017 07:02:18 GMT-0700 (PDT)
