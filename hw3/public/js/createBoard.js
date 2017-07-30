@@ -43,7 +43,6 @@ function fetchJSONFile(url) {
                 load_fail = true;
             }
     }
-    };
   xhttp.open("GET", url, true);
   xhttp.send();
 }
