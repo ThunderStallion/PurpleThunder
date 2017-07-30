@@ -15,31 +15,32 @@ var load_fail = false, theme_fail = false;
     because didn't know it was asynchronous. Once fetched, it will load up the soundboard,
     grid, audio, and themes*/
 function fetchJSONFile(url) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            sb = instr;
-            if(loaded == true){
-                cats = JSON.parse(this.responseText);
-            }
-            else{
-               instr = JSON.parse(this.responseText);
-                sb=instr;
-                createAudiofiles();
-                createImageBoard();
-                createImageList();
-                addThemes();
-                alertErrors();
-                loaded= true;
-            }
-            return JSON.parse(this.responseText);
+    try{ 
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                sb = instr;
+                if(loaded == true){
+                    cats = JSON.parse(this.responseText);
+                }
+                else{
+                instr = JSON.parse(this.responseText);
+                    sb=instr;
+                    createAudiofiles();
+                    createImageBoard();
+                    createImageList();
+                    addThemes();
+                    alertErrors();
+                    loaded= true;
+                }
+                return JSON.parse(this.responseText);
         }
-        else{
-            if(load_fail == false){
+    catch(err){
+        if(load_fail == false){
                 err_msg+="Error loading config file with AJAX\n";
                 load_fail = true;
             }
-        }
+    }
     };
   xhttp.open("GET", url, true);
   xhttp.send();
