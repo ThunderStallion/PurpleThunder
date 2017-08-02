@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<!-- Comments
+    Warning: "Consider avoiding viewports that prevent users from rescaling documents"
+    Comment: We felt as if our sight would cause less anxiety for our users if it wasnt 
+             zoomed in or out since our view is mostly large images on mobile.
+-->
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -10,13 +16,14 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="#4285f4">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <link rel="manifest" href="./manifest.json" />
-        <script src= "js/createBoard.js"></script>
+        <script defer src= "js/createBoard.js"></script>
         <script defer src="site.js"></script>
         <script type="text/javascript">window._trackJs = { token: '4286688050e24061a211ffa2a3012a56' };</script>
         <script type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
         <title> Soundboard Part 3</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link id="theme_css" rel="stylesheet" href="css/light_theme.css">
+        <link defer rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link defer id="theme_css" rel="stylesheet" href="css/light_theme.css">
+        <link rel="icon" href="favicon.ico" />
         <style>
             .sb_gridbox {
                 border: thick solid transparent;
