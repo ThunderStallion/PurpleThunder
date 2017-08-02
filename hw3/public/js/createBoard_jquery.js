@@ -163,7 +163,7 @@ function loadJSON(jsonFile) {
                     loaded = true;
                 }
             } catch(err) {
-                err_msg+="Error pulling file with AJAX\n";\n";
+                err_msg+="Error pulling file with AJAX\n";
                 alertErrors();
             }
           },

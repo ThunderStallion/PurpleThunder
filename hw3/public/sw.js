@@ -6,6 +6,7 @@ self.addEventListener('install', function(e) {
     caches.open('the-magic-cache').then(function(cache) {
       return cache.addAll([
         '/',
+        '/jquery.html',
         '/index.html',
         '/manifest.json',
         '/css/dark_theme.css',

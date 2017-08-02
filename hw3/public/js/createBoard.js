@@ -102,6 +102,7 @@ function createImageBoard(){
     for(i= 0; i<12; i++){
         sb_img.src = sb.image[i];
         sb_img.id= 'i'+i;
+        sb_img.alt= sb.image[i].replace("images/", "");
         var clone = document.importNode(t.content, true);
         sb_grid.appendChild(clone);
 

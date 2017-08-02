@@ -97,12 +97,15 @@ body {
 }
 
 
-/*mobile view fixes navbar*/*/
+/*mobile view fixes navbar*/
 @media screen and (max-width: 750px) {
     .dropbtn , .dropdown{
         width:100%;
     }
     .btn.btn-warning.navbar-btn{
+        width:100%;
+    }
+    #togglebtn{
         width:100%;
     }
 }
