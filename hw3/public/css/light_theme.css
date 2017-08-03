@@ -16,6 +16,7 @@ body {
 
 #retry_button {
     display: none;
+    margin: 10px auto;
 }
 
 /*error box in case browser does not support scripts*/
